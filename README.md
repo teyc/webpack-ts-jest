@@ -13,6 +13,9 @@ I have chosen for you:
    same feature set as `jasmine` and `mocha`, so if you come from
    that world you will be totally comfortable.
 
+Quick start
+=====================
+
 To run application
 
     `npm start`
@@ -24,6 +27,10 @@ To run tests
 To watch tests
 
     `npm run test:watch`
+
+To publish package
+
+    `npm run publish`
 
 Notes:
 ========

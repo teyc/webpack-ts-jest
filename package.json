@@ -1,6 +1,9 @@
 {
+  "name": "webpack-ts-starter",
+  "version": "1.0.0",
   "scripts": {
-    "start": "webpack-dev-server",
+    "start": "webpack-dev-server --open",
+    "publish": "webpack",
     "test": "jest",
     "test:watch": "jest --watch"
   },

@@ -4,8 +4,22 @@ const config: webpack.Configuration = {
 
     entry: {
         'app': './src/app.ts',
-        'vendor': './src/vendor.ts'
+
+        // example: 'vendor': ['lodash', 'jquery']
+        'vendor': [], 
     },
+
+    plugins: [
+        new webpack.optimize.CommonsChunkPlugin({
+            name: "vendor",
+            // filename: "vendor.js"
+            // (Give the chunk a different name)
+
+            minChunks: Infinity,
+            // (with more entries, this ensures that no other module
+            //  goes into the vendor chunk)
+        })
+    ],
 
     output: {
         filename: 'dist/[name].js'
@@ -15,7 +29,7 @@ const config: webpack.Configuration = {
         rules: [
             {
                 test: /\.tsx?$/,
-                exclude: [ /node_modules/ ],
+                exclude: [/node_modules/],
                 loader: 'ts-loader'
             }
         ]
