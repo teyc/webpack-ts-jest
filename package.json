@@ -1,0 +1,35 @@
+{
+  "scripts": {
+    "start": "webpack-dev-server",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "devDependencies": {
+    "@types/jest": "^20.0.8",
+    "@types/webpack": "^3.0.10",
+    "jest": "^21.1.0",
+    "ts-jest": "^21.0.1",
+    "ts-loader": "^2.3.7",
+    "ts-node": "^3.3.0",
+    "typescript": "^2.5.2",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.8.2"
+  },
+  "dependencies": {
+    "corejs": "^1.0.0"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json"
+    ],
+    "moduleDirectories": ["node_modules", "src"]
+  }
+}
