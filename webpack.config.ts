@@ -6,7 +6,7 @@ const config: webpack.Configuration = {
         'app': './src/app.ts',
 
         // example: 'vendor': ['lodash', 'jquery']
-        'vendor': [], 
+        'vendor': ['lodash', 'leaflet'], 
     },
 
     plugins: [
