@@ -35,6 +35,10 @@ const config: webpack.Configuration = {
         ]
     },
 
+    resolve: {
+        extensions: ['.ts', '.tsx', '.js', '.jsx']
+    },
+
     devtool: 'cheap-module-source-map',
     devServer: {}
 }
